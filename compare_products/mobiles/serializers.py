@@ -18,5 +18,4 @@ class Mobiles_details_Serializers(serializers.ModelSerializer):
                   'warranty',
                   'star',
                   'rating_review',
-                  'in_the_box',
-                  'product_type')
+                  'in_the_box')
