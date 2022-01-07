@@ -3,7 +3,7 @@ from django.db.models.deletion import DO_NOTHING
 
 # Create your models here.
 
-class Mobiles_details(models.Model):
+class Mobiles(models.Model):
     company_name = models.CharField(max_length=200, unique = True)
     price = models.FloatField(null=True, blank=True)
     photo = models.CharField(max_length=100, blank=True, default=None)

@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from mobiles.models import Mobiles_details
+from mobiles.models import Mobiles
 
-class Mobiles_details_Serializers(serializers.ModelSerializer):
+class Mobiles_Serializers(serializers.ModelSerializer):
     class Meta:
-        model = Mobiles_details
+        model = Mobiles
         fields = ('company_name',
                   'price',
                   'photo',

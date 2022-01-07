@@ -94,7 +94,7 @@ while(True):
       cursor = conn.cursor()
       for i in range(3):
          try:
-            cursor.execute("""Insert Into mobiles_mobiles_details 
+            cursor.execute("""Insert Into mobiles_mobiles
                            (company_name, price, photo, ram, internal_storage, expandable, display, camera, battery, processor, 
                            link, warranty, star, rating_review, in_the_box) values
                            ('"""+str(name)+"""',

@@ -2,9 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 
 import {Mobiles} from "./Mobiles";
+import {Home} from "./Home";
 import {Navigation} from "./Navigation";
 
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes, // Just Use Routes instead of "Switch"
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
@@ -15,10 +20,15 @@ function App() {
         </h3>
 
         <Navigation/>
-        <Switch>
-          <Route path="/" component={Mobiles} exact/>
-          <Route path="/mobiles" component={Mobiles} exact/>
-        </Switch>
+         
+        <Routes>
+          <Route path="/" element={<Home />} exact/>
+          <Route path="/mobiles" element={<Mobiles />} />
+        </Routes>
+        {/* <Switch>
+        <Route path='/' component={Home} exact/>
+        <Route path='/mobiles' component={Mobile}/>
+      </Switch> */}
      </div>
     </BrowserRouter>
     
