@@ -10,8 +10,9 @@ export class Mobiles extends Component{
     }
 
     refreshList(){
-        fetch(process.env.REACT_APP_API+'mobiles').then(response=>response.json()).then(data=>{
-            this.setState({mobs:data})
+        fetch('http://127.0.0.1:8000/mobiles')
+        .then(response=>response.json())
+        .then(data=>{this.setState({mobs:data});
         });
     }
 
@@ -26,7 +27,6 @@ export class Mobiles extends Component{
                 <Table className="mt-4" striped bordered hover size='sm'>
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>company_name</th>
                             <th>price</th>
                             <th>ram</th>
@@ -47,11 +47,21 @@ export class Mobiles extends Component{
                     </thead>
                     <tbody>
                         {mobs.map(mob=>
-                            <tr key={mob.MobilesID}>
-                                <td>{mob.MobilesID}</td>
+                            <tr key={mob.ID}>
                                 <td>{mob.company_name}</td>
                                 <td>{mob.price}</td>
-
+                                <td>{mob.ram}</td>
+                                <td>{mob.internal_storage}</td>
+                                <td>{mob.expandable}</td>
+                                <td>{mob.display}</td>
+                                <td>{mob.camera}</td>
+                                <td>{mob.battery}</td>
+                                <td>{mob.processor}</td>
+                                <td>{mob.link}</td>
+                                <td>{mob.warranty}</td>
+                                <td>{mob.star}</td>
+                                <td>{mob.rating_review}</td>
+                                <td>{mob.in_the_box}</td>
                             </tr>)}
                     </tbody>
                 </Table>
