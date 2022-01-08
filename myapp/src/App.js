@@ -14,10 +14,11 @@ import {
 function App() {
   return (
     <BrowserRouter>
-      <div className="container">
+
+      {/* <div className="container">
         <h3 className='m-3 d-flex justify-content-center'>
             Saikat Trying
-        </h3>
+        </h3> */}
 
         <Navigation/>
          
@@ -29,7 +30,7 @@ function App() {
         <Route path='/' component={Home} exact/>
         <Route path='/mobiles' component={Mobile}/>
       </Switch> */}
-     </div>
+     {/* </div> */}
     </BrowserRouter>
     
   );
