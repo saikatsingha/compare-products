@@ -29,13 +29,13 @@ export class Navigation extends Component{
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home
-                        <span class="sr-only">(current)</span>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/">Home
+                        {/* <span class="sr-only">(current)</span> */}
                     </a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="products.html">Products</a>
+                    <a class="nav-link" href="/Mobiles">Mobiles</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="about.html">About Us</a>
