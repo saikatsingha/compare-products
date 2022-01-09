@@ -95,16 +95,23 @@ export class Mobiles extends Component{
 
         <div class="row posts">
             {mobs.map(mob=>
-            <div id="1" class="item new col-md-4">
-              <a href="single-product.html">
+            <div id="1" class="item new col-md-2">
+              <a href={`/Mobiles/${mob.id}`}>
                 <div class="featured-item">
-                  <img src='assets/mobile_image/+{mob.image_name)' alt="" />
-                  <h4>{mob.company_name}</h4>
-                  <h6>Rs{mob.price}</h6>
+                  {/* <img src="assets/mobile_images/realme_Narzo_50A_(Oxygen_Blue_64_GB)_(4_GB_RAM).jpg"  alt="" /> */}
+                  <img src={`assets/mobile_images/${mob.photo}`}  alt="" />
+                  {/* <img src={`../img/${img.code}.jpg`}></img> */}
+                  <h6>{mob.company_name}</h6>
+                  <h6>Rs: {mob.price}</h6>
+                  {/* <button class="btn btn-primary">DETAILS</button> */}
+
                 </div>
+                
               </a>
             </div>
+            
             )}
+            
             
 
             {/* <div id="2" class="item high col-md-4">

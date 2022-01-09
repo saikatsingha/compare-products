@@ -4,7 +4,8 @@ from mobiles.models import Mobiles
 class Mobiles_Serializers(serializers.ModelSerializer):
     class Meta:
         model = Mobiles
-        fields = ('company_name',
+        fields = ('id',
+                  'company_name',
                   'price',
                   'photo',
                   'ram',
