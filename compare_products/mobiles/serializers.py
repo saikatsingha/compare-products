@@ -20,3 +20,5 @@ class Mobiles_Serializers(serializers.ModelSerializer):
                   'star',
                   'rating_review',
                   'in_the_box')
+
+class Mobiles_Serializers_Details(serializers.ModelSerializer)
