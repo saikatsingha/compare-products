@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import {Mobiles} from "./Mobiles";
+import {MobilesDetails} from "./MobilesDetails";
 import {Home} from "./Home";
 import {Navigation} from "./Navigation";
 
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} exact/>
           <Route path="/mobiles" element={<Mobiles />} />
+          <Route path={`/mobiles/${path}`} element={<Home />} exact/>
         </Routes>
         {/* <Switch>
         <Route path='/' component={Home} exact/>

@@ -2,9 +2,8 @@ from rest_framework import serializers
 from mobiles.models import Mobiles
 
 class Mobiles_Serializers(serializers.ModelSerializer):
-    class Meta:
-        model = Mobiles
-        fields = ('id',
+    class Meta:        
+        fields = ['id',
                   'company_name',
                   'price',
                   'photo',
@@ -19,6 +18,7 @@ class Mobiles_Serializers(serializers.ModelSerializer):
                   'warranty',
                   'star',
                   'rating_review',
-                  'in_the_box')
+                  'in_the_box']
+        model = Mobiles
 
-class Mobiles_Serializers_Details(serializers.ModelSerializer)
+# class Mobiles_Serializers_Details(serializers.ModelSerializer)
