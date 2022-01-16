@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import Layout from './Layout';
-import {Mobiles} from "./Mobiles";
-import MobilesDetails from "./MobilesDetails";
-import {Home} from "./Home";
+import Layout from './components/Layout';
+import Mobiles from "./components/Mobiles";
+import MobilesDetails from "./components/MobilesDetails";
+import Home from "./components/Home";
 
 const App = () => (
   <BrowserRouter>
