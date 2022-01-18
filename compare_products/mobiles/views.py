@@ -1,32 +1,23 @@
-from rest_framework import generics
+from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
-
-from rest_framework.views import APIView
-from rest_framework import viewsets
-from rest_framework.response import Response
-
-
 # from django.db import models
 
 from mobiles.models import Mobiles
-from mobiles.serializers import Mobiles_Serializers
+from mobiles.serializers import Mobiles_Serializers, Mobiles_Serializers_Details
 
 # Create your views here.
 
-class MobileList(generics.ListAPIView):
-    queryset = Mobiles.objects.all()
-    serializer_class = Mobiles_Serializers
-    
-    
-   
-class MobileDetails(generics.RetrieveAPIView):
-    queryset = Mobiles.objects.all()
-    serializer_class = Mobiles_Serializers
+@csrf_exempt
+def mobilesApi(request):
+    mobiles = Mobiles.objects.all()
+    mobiles_serializers = Mobiles_Serializers(mobiles, many=True)
+    return JsonResponse(mobiles_serializers.data, safe=False)
 
-
-
-
-
-
+@csrf_exempt
+def mobilesApi(request):
+    mobiles = Mobiles.objects.get(id=mobiles.id)
+    mobiles_serializers_details = Mobiles_Serializers_Details(mobiles, many=True)
+    return JsonResponse(mobiles_serializers_details.data, safe=False)
 

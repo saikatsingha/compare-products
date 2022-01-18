@@ -13,13 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
-from .views import MobileDetails, MobileList
-# from .views import MobileAPIView
+from django.urls import include, re_path
+from mobiles import views
 
 urlpatterns = [
-    # re_path(r'^', views.mobilesApi)
-    # re_path('',MobileAPIView),
-    path('<int:pk>/', MobileDetails.as_view(), name='mobiledetails'),
-    path('', MobileList.as_view(), name='mobilelist'),
+    re_path(r'^', views.mobilesApi)
 ]
