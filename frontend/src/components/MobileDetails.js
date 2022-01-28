@@ -1,11 +1,37 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, Component } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
-const mobiledetails = () => (
-    <div >
-        Mobiles
-        {console.log('mobiledetails')}
-    </div>
-);
+export class MobileDetails extends Component{
 
-export default mobiledetails;
+    constructor(props){
+        super(props);
+        this.state={mobs:[]}
+    }
+    
+    refreshList(){
+
+        fetch('http://127.0.0.1:8000/mobiles/1')
+        .then(response=>response.json())
+        .then(data=>{this.setState({mobs:data});    
+        console.log(mobs);
+        });
+    }
+    componentDidMount(){
+        this.refreshList();
+    
+    }
+    render(){
+        // const {mobs}=this.state;
+
+        return (
+            <div className='container mt-3'>
+                
+                
+            </div>
+        );
+        }
+
+}
+
+
