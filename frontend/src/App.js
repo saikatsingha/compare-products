@@ -1,13 +1,11 @@
-import {Mobiles} from "./components/Mobiles";
-import {MobileDetails} from "./components/MobileDetails";
-import {Home} from "./components/Home";
-import {Navigation} from "./components/Navigation";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
-import {
-  BrowserRouter,
-  Routes, // Just Use Routes instead of "Switch"
-  Route,
-} from "react-router-dom";
+import Mobiles from "./components/Mobiles";
+import MobileDetails from "./components/MobileDetails";
+import Home from "./components/Home";
+import Navigation from "./components/Navigation";
+
+
 
 function App() {
   return (
