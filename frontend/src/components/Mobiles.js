@@ -1,28 +1,28 @@
 import React,{Component} from "react";
 
-const Mobiles = () => (
-    // constructor(props){
-    //     super(props);
-    //     this.state={mobs:[]}
-    // }
-    // refreshList(){
-    //     fetch('http://127.0.0.1:8000/mobiles')
-    //     .then(response=>response.json())
-    //     .then(data=>{this.setState({mobs:data});        
-    //     });
-    // }
-    // componentDidMount(){
-    //     this.refreshList();
-    // }    
-
-    //     const {mobs}=this.state;
+export class Mobiles extends Component{
+    constructor(props){
+        super(props);
+        this.state={mobs:[]}
+    }
+    refreshList(){
+        fetch('http://127.0.0.1:8000/mobiles')
+        .then(response=>response.json())
+        .then(data=>{this.setState({mobs:data});        
+        });
+    }
+    componentDidMount(){
+        this.refreshList();
+    }    
+    render(){
+        const {mobs}=this.state;
         // {console.log(mobs);}
-
+        return(
             
             <div>
                <div className="featured container no-gutter">
                   <div className="row posts">
-                      {/* {mobs.map(mob=>
+                      {mobs.map(mob=>
                       <div id="1" className="item new col-md-4">
                         <a href="single-product.html">
                           <div className="featured-item">
@@ -32,12 +32,10 @@ const Mobiles = () => (
                           </div>
                         </a>
                       </div>
-                      )} */}
+                      )}
                   </div>
               </div>
             </div>
-  
-  
-);
-
-export default Mobiles;
+        )
+    }
+}

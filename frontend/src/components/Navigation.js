@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 import {NavLink} from "react-router-dom";
 
-const navigation = () => (
-
+export class Navigation extends Component{
+    render(){
+        return(
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark static-top">
             <div className="container">
                 <a className="navbar-brand" href="#"><img src="assets/images/header-logo.png" alt=""/></a>
@@ -29,6 +30,6 @@ const navigation = () => (
                 </div>
             </div>
             </nav>
-        );
-export default navigation;
-    
+        )
+    }
+}
