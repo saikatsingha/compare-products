@@ -1,14 +1,14 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
-import Mobiles from "./components/Mobiles";
-import MobileDetails from "./components/MobileDetails";
-import Home from "./components/Home";
-import Navigation from "./components/Navigation";
+import Mobiles from './components/Mobiles';
+import MobileDetails from './components/MobileDetails';
+import Home from './components/Home';
+import Navigation from './components/Navigation';
 
 
 
-function App() {
-  return (
+const App = () => (
+  
     <BrowserRouter>
 
        <Navigation/>
@@ -20,7 +20,23 @@ function App() {
         </Routes>
     </BrowserRouter>
     
-  );
-}
+
+);
 
 export default App;
+
+// const App = () => (
+//   <Router>
+//       <Layout>
+//           <Switch>
+//               <Route exact path='/' component={Home} ></Route>
+//               <Route exact path='/blog' component={Blog} />
+//               <Route exact path='/category/:id' component={Category} />
+//               <Route exact path='/blog/:id' component={BlogDetail} />
+//           </Switch>
+//       </Layout>
+//   </Router>
+// );
+
+// export default App;
+
