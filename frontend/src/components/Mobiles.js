@@ -1,10 +1,12 @@
 import React,{Component} from "react";
 
 export class Mobiles extends Component{
+
     constructor(props){
         super(props);
         this.state={mobs:[]}
     }
+    
     refreshList(){
         fetch('http://127.0.0.1:8000/mobiles')
         .then(response=>response.json())
@@ -20,7 +22,7 @@ export class Mobiles extends Component{
         return(
             
             <div>
-               <div className="featured container no-gutter">
+               {/* <div className="featured container no-gutter">
                   <div className="row posts">
                       {mobs.map(mob=>
                       <div id="1" className="item new col-md-4">
@@ -34,7 +36,57 @@ export class Mobiles extends Component{
                       </div>
                       )}
                   </div>
-              </div>
+              </div> */}
+              <section id="portfolio" class="portfolio">
+                <div class="container">
+
+                    <div class="section-title">
+                    <h2>Mobiles</h2>
+                    <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit</p>
+                    </div>
+
+                    <div class="row">
+                    <div class="col-lg-12">
+                        <ul id="portfolio-flters">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-app">App</li>
+                        <li data-filter=".filter-card">Card</li>
+                        <li data-filter=".filter-web">Web</li>
+                        </ul>
+                    </div>
+                    </div>
+
+                    <div class="row portfolio-container">
+
+                    {mobs.map(mob=>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                        <div class="portfolio-wrap">
+                        <figure>
+                            <a href="portfolio-details.html">
+                                <img src='assets/mobile_image/realme_Narzo_50A_(Oxygen_Blue_64_GB)_(4_GB_RAM).jpg' class="img-fluid" alt=""/>
+                            Price: Rs {mob.price }
+                            RAM: {mob.ram} GB
+                            Internal Storage: {mob.internal_storage} GB
+                            </a>
+
+                        </figure>
+
+                        {/* <div class="portfolio-info">
+                            <h4><a href="portfolio-details.html">{mob.company_name.split(' ')[0]}</a></h4>
+                            <p>{mob.company_name}</p>
+                        </div> */}
+                        </div>
+                    </div>
+                    )}
+                    
+
+                    
+
+                    </div>
+
+                </div>
+                </section>
             </div>
         )
     }
