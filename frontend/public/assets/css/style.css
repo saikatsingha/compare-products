@@ -658,19 +658,27 @@ section {
 }
 .portfolio .portfolio-item {
   position: relative;
-  height: 260px;
+  height: 360px;
   overflow: hidden;
 }
 .portfolio .portfolio-item figure {
   overflow: hidden;
-  height: 210px;
+  height: 240px;
   position: relative;
   border-radius: 4px 4px 0 0;
   margin: 0;
 }
+.portfolio .portfolio-item figure:hover img {
+  opacity: 0.4;
+  transition: 0.4s;
+  height: 200px;
+}
+
 .portfolio .portfolio-item figure img {
   height: 200px;
 }
+
+
 .portfolio .portfolio-item figure .link-preview, .portfolio .portfolio-item figure .link-details {
   position: absolute;
   display: flex;

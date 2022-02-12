@@ -63,19 +63,23 @@ export class Mobiles extends Component{
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
                         <div class="portfolio-wrap">
                         <figure>
-                            <a href="portfolio-details.html">
-                                <img src='assets/mobile_image/realme_Narzo_50A_(Oxygen_Blue_64_GB)_(4_GB_RAM).jpg' class="img-fluid" alt=""/>
+                            
+                                {/* <img src={`${image_path}${mob.photo}`} class="img-fluid" alt=""/> */}
+                                
+                                <img src={`assets/mobile_image/${mob.photo}`} class="img-fluid" alt=""/>
+                            {/* <p><a href="portfolio-details.html">{mob.company_name }</a></p>
+                            <p><a href="portfolio-details.html">{mob.company_name.split(' ')[0]}</a></p>
                             Price: Rs {mob.price }
                             RAM: {mob.ram} GB
-                            Internal Storage: {mob.internal_storage} GB
-                            </a>
+                            Internal Storage: {mob.internal_storage} GB */}
+                            
 
                         </figure>
 
-                        {/* <div class="portfolio-info">
-                            <h4><a href="portfolio-details.html">{mob.company_name.split(' ')[0]}</a></h4>
+                        <div class="portfolio-info">
+                            <h4><a href={`/mobile/${mob.id}`}>{mob.company_name.split(' ')[0]}</a></h4>
                             <p>{mob.company_name}</p>
-                        </div> */}
+                        </div>
                         </div>
                     </div>
                     )}
