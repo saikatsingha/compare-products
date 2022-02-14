@@ -5,24 +5,24 @@ export class Navigation extends Component{
     render(){
         return(
         <div>
-              <div id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
+              <div id="header" className="fixed-top d-flex align-items-center">
+    <div className="container d-flex align-items-center">
 
-      <div class="logo me-auto">
-        <h1><a href="index.html">Lumia</a></h1>
+      <div className="logo me-auto">
+        <h1><a href="/">Compare Product</a></h1>
         
         
       </div>
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
+      <nav id="navbar" className="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="/">Home</a></li>
-          <li><a class="nav-link scrollto" href="/mobiles">Mobiles</a></li>
-          <li><a class="nav-link scrollto" href="/televisions">Televisions</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a className="nav-link scrollto active" href="/">Home</a></li>
+          <li><a className="nav-link scrollto" href="/mobiles">Mobiles</a></li>
+          <li><a className="nav-link scrollto" href="/televisions">Televisions</a></li>
+          <li className="dropdown"><a href="#"><span>Drop Down</span> <i className="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+              <li className="dropdown"><a href="#"><span>Deep Drop Down</span> <i className="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
                   <li><a href="#">Deep Drop Down 2</a></li>
@@ -36,16 +36,16 @@ export class Navigation extends Component{
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i className="bi bi-list mobile-nav-toggle"></i>
       </nav>
 
-      <div class="header-social-links d-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div className="header-social-links d-flex align-items-center">
+        <a href="#" className="twitter"><i className="bi bi-twitter"></i></a>
+        <a href="#" className="facebook"><i className="bi bi-facebook"></i></a>
+        <a href="#" className="instagram"><i className="bi bi-instagram"></i></a>
+        <a href="#" className="linkedin"><i className="bi bi-linkedin"></i></a>
       </div>
 
     </div>
