@@ -8,15 +8,15 @@ export class MobileDetail extends Component{
         this.state={mobs:[]}
     }
     
-    refreshList(){
-        fetch('http://127.0.0.1:8000/mobiles/4')
-        .then(response=>response.json())
-        .then(data=>{this.setState({mobs:data});        
-        });
-    }
-    componentDidMount(){
-        this.refreshList();
-    }    
+    // refreshList(){
+    //     fetch('http://127.0.0.1:8000/mobiles/4')
+    //     .then(response=>response.json())
+    //     .then(data=>{this.setState({mobs:data});        
+    //     });
+    // }
+    // componentDidMount(){
+    //     this.refreshList();
+    // }    
     render(){
         const {mobs}=this.state;
         {console.log(mobs);}
