@@ -1,21 +1,20 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
-// import {Mobiles} from "./components/Mobiles";
-// import {MobileDetail} from "./components/MobileDetail";
-import Home from "./components/Home";
-import Navigation from "./components/Navigation";
+import Layout from './components/Layout';
+import Home from './components/Home';
+import Mobiles from "./components/Mobiles";
+// import MobileDetail from "./components/MobileDetail";
 
 const App = () => {
   return (
     <BrowserRouter>
-
-       <Navigation/>
-         
-        <Routes>
-          <Route exact path='/' component={Home} ></Route>
-          <Route path="/mobiles" element={<Mobiles />} />
-          <Route path="/mobiles/:id" element={<MobileDetail />} />
-        </Routes>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />}/>
+              <Route path="/mobiles" element={<Mobiles />} />
+              {/* <Route path="/mobiles/:id" element={MobileDetail } /> */}
+            </Routes>
+          </Layout>
     </BrowserRouter>
     
   );
