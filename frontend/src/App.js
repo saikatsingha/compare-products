@@ -1,9 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 
 import Layout from "./components/Layout";
 import Home from "./components/Home";
 import Mobiles from "./components/Mobiles";
 import MobileDetail from "./components/MobileDetail";
+
+
 
 const App = () => {
   return (
@@ -13,6 +15,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/mobiles" element={<Mobiles />} />
           <Route path="/mobiles/:id" element={<MobileDetail />} />
+          {/* </Route> */}
         </Routes>
       </Layout>
     </BrowserRouter>
@@ -20,12 +23,3 @@ const App = () => {
 };
 
 export default App;
-
-// <Switch>
-//           <Route exact path="/">
-//             <Home />
-//           </Route>
-//           <Route path="/topics">
-//             <Topics />
-//           </Route>
-//         </Switch>

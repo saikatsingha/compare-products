@@ -13,6 +13,9 @@ const Mobiles = () => {
 
     const [mobiles, setMobiles] = useState([]);
 
+    //let{path, url} = useRouteMatch()
+
+
     useEffect(() => {
         const fetchMobiles = async () => {
             try {
@@ -74,6 +77,7 @@ const Mobiles = () => {
 
     return (
         <div className='container mt-3'>
+  
             {getMobiles()}
         </div>
     );
