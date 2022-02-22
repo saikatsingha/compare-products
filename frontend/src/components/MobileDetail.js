@@ -1,55 +1,37 @@
-import React,{Component} from "react";
-// import Axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
-export class MobileDetail extends Component{
+
+const MobileDetail = (props) => {
+    const [mobile, setMobile] = useState({});
+
+    useEffect(() => {
+        const slug = props.match.params.id;
+
+        const fetchData = async () => {
+            try {
+                const res = await axios.get(`http://127.0.0.1:8000/mobiles/1`);
+                setMobile(res.data);
+                {console.log(res)}
+            }
+            catch (err) {
+
+            }
+        };
+
+        fetchData();
+    }, [props.match.params.id]);
+
+    return (
+        <div className='container mt-3'>
+            <h1 className='display-2'>{mobile.title}</h1>
+            <h4>{mobile.month} {mobile.day}</h4>
+            <hr />
+            <p className='lead mb-5'><Link to='/mobile' className='font-weight-bold'>Back to mobiles</Link></p>
+        </div>
+    );
     
-    constructor(props){
-        super(props);
-        this.state={ mobs: [] }
-    }
-    
-    refreshList(){
-        fetch('http://127.0.0.1:8000/mobiles/4')
-        .then(response=>response.json())
-        .then(data=>{this.setState({ mobs: data });        
-        });
-    }
-    componentDidMount(){
-        this.refreshList();
-    }    
-    render(){
-        const {mobs}=this.state;
-        {console.log(mobs);}
-        return(
-            
-            <div>
-              <section id="portfolio" className="portfolio">
-                <div className="container">
-                    <div className="section-title">
-                        <h2>Mobiles</h2>
-                    </div>
-                    <div className="row portfolio-container">
+};
 
-                        {mobs.map(mob=>
-
-                        <div className="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
-                            <div className="portfolio-wrap">
-                            <figure>
-                                <img src={`assets/mobile_image/${mob.photo}`} className="img-fluid" alt=""/>
-                            </figure>
-                            <div className="portfolio-info">
-                                <h4><a href={`/mobile/${mob.id}`}>{mob.company_name.split(' ')[0]}</a></h4>
-                                <p>{mob.company_name}</p>
-                            </div>
-                            </div>
-                        </div>
-
-                        )}
-                        
-                    </div>                    
-                </div>
-                </section>
-            </div>
-        )
-    }
-}
+export default MobileDetail;
