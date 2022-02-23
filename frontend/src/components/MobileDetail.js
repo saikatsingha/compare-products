@@ -21,12 +21,9 @@ const MobileDetail = (props) => {
     
     return(
         
-            <div classNameName='container mt-3'>
+            <div className='container mt-3'>
                 {console.log(mobile.company_name)}
-                {/* <h1 classNameName='display-2'>{mobile.title}</h1>
-                <h4>{mobile.month} {mobile.day}</h4>
-                <hr />
-                <p classNameName='lead mb-5'><Link to='/mobile' classNameName='font-weight-bold'>Back to mobiles</Link></p> */}
+                
             </div>
     );
     

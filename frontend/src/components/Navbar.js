@@ -2,41 +2,51 @@ import React, { Component } from "react";
 import { Link, NavLink } from 'react-router-dom';
 
 const navbar = () => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <div className="container-fluid">
-    <Link className="navbar-brand" to='/'>Compare Products</Link>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul className="navbar-nav">
-          <li className="nav-item">
-          <Link className="nav-link" to='/'>Home <span className="sr-only"></span></Link>
-          </li>
-          <li className="nav-item">
-          <Link className="nav-link" to='/mobiles'>Mobiles <span className="sr-only"></span></Link>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/televisions">Televisions</a>
-          </li>
-          <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
-            </a>
-            <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a className="dropdown-item" href="#">Action</a></li>
-              <li><a className="dropdown-item" href="#">Another action</a></li>
-              <li><a className="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form className="d-flex">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+
+<header class="header_section">
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg custom_nav-container ">
+    <a class="navbar-brand" href="index.html">
+      <span>
+        Timups
+      </span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class=""> </span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/mobiles"> Mobiles </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/televisions"> Televisions </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+      <div class="user_option-box">
+        <a href="">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-cart-plus" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
-</nav>
+  </nav>
+</div>
+</header>
+
 );
 
   

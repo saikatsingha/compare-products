@@ -43,45 +43,61 @@ const Mobiles = () => {
         mobiles.map(mobilesPost => {
           
             return list.push(
-                <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    
-                    <div className="col p-4 d-flex flex-column position-static">
-                        <div className="d-inline-block mb-2 text-primary">{mobilesPost.company_name}</div>
-                        <h3 className="mb-0">{mobilesPost.company_name.split(" ")[0]}</h3>
-                        <img src={`mobile_image/${mobilesPost.photo}`} width="40" height="70" alt="" />
-                        <div className="mb-1 text-muted">{mobilesPost.month} {mobilesPost.day}</div>
-                        <p className="card-text mb-auto">{mobilesPost.excerpt}</p>
-                        <Link to={`/mobiles/${mobilesPost.id}`} className="stretched-link">Continue reading</Link>
-                    </div>
-                    <div className="col-auto d-none d-lg-block">
-                    </div>
-                </div>
+                
+                <a href={`/mobiles/${mobilesPost.id}`}>
+                            <div class="img-box">
+                                <img src={`mobile_image/${mobilesPost.photo}`} alt="" />
+                            </div>
+                            <div class="detail-box">
+                                <h6>
+                                {mobilesPost.company_name.split(" ")[0]}
+                                </h6>
+                                <h6>
+                                    Price:
+                                    <span>
+                                    {mobilesPost.price}.00
+                                    </span>
+                                </h6>
+                               
+                            </div>
+                            <h6>
+                                {mobilesPost.company_name}
+                            </h6>                            
+                        </a>
             );
         });
 
         for (let i = 0; i < list.length; i += 2) {
             result.push(
-                <div key={i} className='row mb-2'>
-                    <div className='col-md-6'>
+                
+                <div class="col-sm-6 col-xl-3">
+                    <div class="box">
                         {list[i]}
                     </div>
-                    <div className='col-md-6'>
+                    <div class="box">
                         {list[i+1] ? list[i+1] : null}
                     </div>
                 </div>
             )
         }
-
         return result;
     };
 
     return (
-        <div className='container mt-3'>
-  
-            {getMobiles()}
-        </div>
+        <section class="shop_section layout_padding">
+            <div class="container">
+                <div class="heading_container heading_center">
+                    <h2>
+                        Latest Watches
+                    </h2>
+                </div>
+                <div class="row">
+                    {getMobiles()}
+
+                </div>
+            </div>
+        </section>
     );
 };
 
 export default Mobiles;
-
