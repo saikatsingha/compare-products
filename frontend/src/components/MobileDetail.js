@@ -21,10 +21,38 @@ const MobileDetail = (props) => {
     
     return(
         
-            <div className='container mt-3'>
-                {console.log(mobile.company_name)}
+            // <div className='container mt-3'>
+            //     {console.log(mobile.company_name)}
                 
+            // </div>
+            <>
+            <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 col-lg-5 ">
+          <div class="img-box">
+            <img src={process.env.PUBLIC_URL + `/mobile_image/${mobile.photo}`} alt="" />
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-7">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+              {mobile.company_name.split(" ")[0]}
+              </h2>
             </div>
+            <p>
+            {mobile.company_name}
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+            </>
     );
     
   };
