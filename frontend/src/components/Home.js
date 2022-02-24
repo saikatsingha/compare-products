@@ -5,81 +5,81 @@ import { Link } from 'react-router-dom';
 const Home = () => (
 
 <>
-    <section class="slider_section ">
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container-fluid ">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
+    <section className="slider_section ">
+      <div id="customCarousel1" className="carousel slide" data-ride="carousel">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <div className="container-fluid ">
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="detail-box">
                     <h1>
                       Smart Watches
                     </h1>
                     <p>
                       Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.
                     </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
+                    <div className="btn-box">
+                      <a href="" className="btn1">
                         Contact Us
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="img-box">
+                <div className="col-md-6">
+                  <div className="img-box">
                     <img src="images/slider-img.png" alt="" /> 
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="carousel-item ">
-            <div class="container-fluid ">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
+          <div className="carousel-item ">
+            <div className="container-fluid ">
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="detail-box">
                     <h1>
                       Smart Watches
                     </h1>
                     <p>
                       Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.
                     </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
+                    <div className="btn-box">
+                      <a href="" className="btn1">
                         Contact Us
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="img-box">
+                <div className="col-md-6">
+                  <div className="img-box">
                     <img src="images/slider-img.png" alt="" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="carousel-item ">
-            <div class="container-fluid ">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
+          <div className="carousel-item ">
+            <div className="container-fluid ">
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="detail-box">
                     <h1>
                       Smart Watches
                     </h1>
                     <p>
                       Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.
                     </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
+                    <div className="btn-box">
+                      <a href="" className="btn1">
                         Contact Us
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="img-box">
+                <div className="col-md-6">
+                  <div className="img-box">
                     <img src="images/slider-img.png" alt="" />
                   </div>
                 </div>
@@ -87,8 +87,8 @@ const Home = () => (
             </div>
           </div>
         </div>
-        <ol class="carousel-indicators">
-          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+        <ol className="carousel-indicators">
+          <li data-target="#customCarousel1" data-slide-to="0" className="active"></li>
           <li data-target="#customCarousel1" data-slide-to="1"></li>
           <li data-target="#customCarousel1" data-slide-to="2"></li>
         </ol>
@@ -96,9 +96,9 @@ const Home = () => (
 
     </section>
 
-    <section class="feature_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
+    <section className="feature_section layout_padding">
+    <div className="container">
+      <div className="heading_container">
         <h2>
           Features Of Our Watches
         </h2>
@@ -106,13 +106,13 @@ const Home = () => (
           Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
-      <div class="row">
-        <div class="col-sm-6 col-lg-3">
-          <div class="box">
-            <div class="img-box">
+      <div className="row">
+        <div className="col-sm-6 col-lg-3">
+          <div className="box">
+            <div className="img-box">
               <img src="images/f1.png" alt="" />
             </div>
-            <div class="detail-box">
+            <div className="detail-box">
               <h5>
                 Mobiles
               </h5>
@@ -123,17 +123,17 @@ const Home = () => (
                 <span>
                   Read More
                 </span>
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
               </a>
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="box">
-            <div class="img-box">
+        <div className="col-sm-6 col-lg-3">
+          <div className="box">
+            <div className="img-box">
               <img src="images/f2.png" alt="" />
             </div>
-            <div class="detail-box">
+            <div className="detail-box">
               <h5>
                 Alerts & Notifications
               </h5>
@@ -144,17 +144,17 @@ const Home = () => (
                 <span>
                   Read More
                 </span>
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
               </a>
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="box">
-            <div class="img-box">
+        <div className="col-sm-6 col-lg-3">
+          <div className="box">
+            <div className="img-box">
               <img src="images/f3.png" alt="" />
             </div>
-            <div class="detail-box">
+            <div className="detail-box">
               <h5>
                 Messages
               </h5>
@@ -165,17 +165,17 @@ const Home = () => (
                 <span>
                   Read More
                 </span>
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
               </a>
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="box">
-            <div class="img-box">
+        <div className="col-sm-6 col-lg-3">
+          <div className="box">
+            <div className="img-box">
               <img src="images/f4.png" alt="" />
             </div>
-            <div class="detail-box">
+            <div className="detail-box">
               <h5>
                 Bluetooth
               </h5>
@@ -186,13 +186,13 @@ const Home = () => (
                 <span>
                   Read More
                 </span>
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div class="btn-box">
+      <div className="btn-box">
         <a href="">
           View More
         </a>

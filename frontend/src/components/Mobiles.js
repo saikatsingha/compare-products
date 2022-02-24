@@ -45,10 +45,10 @@ const Mobiles = () => {
             return list.push(
                 
                 <a href={`/mobiles/${mobilesPost.id}`}>
-                            <div class="img-box">
+                            <div className="img-box">
                                 <img src={`mobile_image/${mobilesPost.photo}`} alt="" />
                             </div>
-                            <div class="detail-box">
+                            <div className="detail-box">
                                 <h6>
                                 {mobilesPost.company_name.split(" ")[0]}
                                 </h6>
@@ -70,11 +70,11 @@ const Mobiles = () => {
         for (let i = 0; i < list.length; i += 2) {
             result.push(
                 
-                <div class="col-sm-6 col-xl-3">
-                    <div class="box">
+                <div className="col-sm-6 col-xl-3">
+                    <div className="box">
                         {list[i]}
                     </div>
-                    <div class="box">
+                    <div className="box">
                         {list[i+1] ? list[i+1] : null}
                     </div>
                 </div>
@@ -84,14 +84,14 @@ const Mobiles = () => {
     };
 
     return (
-        <section class="shop_section layout_padding">
-            <div class="container">
-                <div class="heading_container heading_center">
+        <section className="shop_section layout_padding">
+            <div className="container">
+                <div className="heading_container heading_center">
                     <h2>
                         Latest Watches
                     </h2>
                 </div>
-                <div class="row">
+                <div className="row">
                     {getMobiles()}
 
                 </div>
