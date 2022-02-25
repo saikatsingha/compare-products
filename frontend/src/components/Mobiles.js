@@ -88,12 +88,11 @@ const Mobiles = () => {
             <div className="container">
                 <div className="heading_container heading_center">
                     <h2>
-                        Latest Watches
+                        Latest Mobiles
                     </h2>
                 </div>
                 <div className="row">
                     {getMobiles()}
-
                 </div>
             </div>
         </section>

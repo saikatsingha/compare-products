@@ -6,9 +6,9 @@ const navbar = () => (
 <header className="header_section">
 <div className="container-fluid">
   <nav className="navbar navbar-expand-lg custom_nav-container ">
-    <a className="navbar-brand" href="index.html">
+    <a className="navbar-brand" href="/">
       <span>
-        Timups
+        Compare Products
       </span>
     </a>
 
