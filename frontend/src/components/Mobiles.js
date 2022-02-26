@@ -6,6 +6,8 @@ import { Outlet } from "react-router-dom";
 import MobileDetail from "./MobileDetail";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
+import Pagination from "./Pagination";
+import ReactPaginate from "react-paginate";
 
 
 
@@ -13,7 +15,51 @@ const Mobiles = () => {
 
     const [mobiles, setMobiles] = useState([]);
 
-    //let{path, url} = useRouteMatch()
+    // const [users, setUsers] = useState(JsonData.slice(0, 50));
+    const [pageNumber, setPageNumber] = useState(0);
+
+    const usersPerPage = 10;
+    const pagesVisited = pageNumber * usersPerPage;
+
+    const displayMobiles = mobiles
+        .slice(pagesVisited, pagesVisited + usersPerPage)
+        .map((Post) => {
+        return (
+
+
+            <div class="col-md-3 ">
+            <div class="box">
+                <a href={`/mobiles/${Post.id}`}>
+                <div className="img-box">
+                    <img src={`mobile_image/${Post.photo}`} alt="" />
+                </div>
+                <div className="detail-box">
+                    <h6>
+                    {Post.company_name.split(" ")[0]}
+                    </h6>
+                    <h6>
+                        Price:
+                        <span>
+                        {Post.price}.00
+                        </span>
+                    </h6>
+                
+                </div>
+                <h6>
+                    {Post.company_name}
+                </h6>                            
+            </a>
+        </div>
+        </div>
+
+       );
+        });
+
+    const pageCount = Math.ceil(mobiles.length / usersPerPage);
+
+    const changePage = ({ selected }) => {
+        setPageNumber(selected);
+    };
 
 
     useEffect(() => {
@@ -30,73 +76,89 @@ const Mobiles = () => {
         fetchMobiles();
     }, []);
 
-    const capitalizeFirstLetter = (word) => {
-        if (word)
-            return word.charAt(0).toUpperCase() + word.slice(1);
-        return '';
-    };
-
-    const getMobiles = () => {
-        let list = [];
-        let result = [];
-        
-        mobiles.map(mobilesPost => {
-          
-            return list.push(
-                
-                <a href={`/mobiles/${mobilesPost.id}`}>
-                            <div className="img-box">
-                                <img src={`mobile_image/${mobilesPost.photo}`} alt="" />
-                            </div>
-                            <div className="detail-box">
-                                <h6>
-                                {mobilesPost.company_name.split(" ")[0]}
-                                </h6>
-                                <h6>
-                                    Price:
-                                    <span>
-                                    {mobilesPost.price}.00
-                                    </span>
-                                </h6>
-                               
-                            </div>
-                            <h6>
-                                {mobilesPost.company_name}
-                            </h6>                            
-                        </a>
-            );
-        });
-
-        for (let i = 0; i < list.length; i += 2) {
-            result.push(
-                
-                <div className="col-sm-6 col-xl-3">
-                    <div className="box">
-                        {list[i]}
-                    </div>
-                    <div className="box">
-                        {list[i+1] ? list[i+1] : null}
-                    </div>
-                </div>
-            )
-        }
-        return result;
-    };
 
     return (
+        <>
         <section className="shop_section layout_padding">
-            <div className="container">
-                <div className="heading_container heading_center">
-                    <h2>
-                        Latest Mobiles
-                    </h2>
-                </div>
-                <div className="row">
-                    {getMobiles()}
-                </div>
-            </div>
+             <div className="container">
+                 <div className="heading_container heading_center">
+                     <h2>
+                         Latest Mobiles
+                     </h2>
+                 </div>
+                 <div className="row">
+                    {displayMobiles}
+                </div> 
+            </div> 
         </section>
-    );
+          <ReactPaginate
+            previousLabel={"Previous"}
+            nextLabel={"Next"}
+            pageCount={pageCount}
+            onPageChange={changePage}
+            containerClassName={"paginationBttns"}
+            previousLinkClassName={"previousBttn"}
+            nextLinkClassName={"nextBttn"}
+            disabledClassName={"paginationDisabled"}
+            activeClassName={"paginationActive"}
+          />
+        </>
+      );
+    
+
+    // return (
+    //     <section className="shop_section layout_padding">
+    //         <div className="container">
+    //             <div className="heading_container heading_center">
+    //                 <h2>
+    //                     Latest Mobiles
+    //                 </h2>
+    //             </div>
+    //             <div className="row">
+                    
+    //             {mobiles.slice(pagination.start, pagination.end).map((Post) => (
+    //                 <div class="col-md-3 ">
+    //                     <div class="box">
+    //                         <a href={`/mobiles/${Post.id}`}>
+    //                         <div className="img-box">
+    //                             <img src={`mobile_image/${Post.photo}`} alt="" />
+    //                         </div>
+    //                         <div className="detail-box">
+    //                             <h6>
+    //                             {Post.company_name.split(" ")[0]}
+    //                             </h6>
+    //                             <h6>
+    //                                 Price:
+    //                                 <span>
+    //                                 {Post.price}.00
+    //                                 </span>
+    //                             </h6>
+                            
+    //                         </div>
+    //                         <h6>
+    //                             {Post.company_name}
+    //                         </h6>                            
+    //                     </a>
+    //                 </div>
+    //             </div>
+    //             ))}
+
+    //             </div>
+    //             <ReactPaginate
+    //                 previousLabel={"Previous"}
+    //                 nextLabel={"Next"}
+    //                 pageCount={pageCount}
+    //                 onPageChange={changePage}
+    //                 containerClassName={"paginationBttns"}
+    //                 previousLinkClassName={"previousBttn"}
+    //                 nextLinkClassName={"nextBttn"}
+    //                 disabledClassName={"paginationDisabled"}
+    //                 activeClassName={"paginationActive"}
+    //             />
+    //         </div>
+            
+    //     </section>
+    // );
 };
 
 export default Mobiles;
