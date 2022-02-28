@@ -89,76 +89,25 @@ const Mobiles = () => {
                  <div className="row">
                     {displayMobiles}
                 </div> 
+                <div className="d-flex justify-content-center">
+
+                                <ReactPaginate
+                                    previousLabel={"Previous"} nextLabel={"Next"} 
+                                    pageCount={pageCount}
+                                    onPageChange={changePage}
+                                    containerClassName={"pagination"}
+                                    previousLinkClassName={"previousBttn"}
+                                    nextLinkClassName={"nextBttn"}
+                                    disabledClassName={"paginationDisabled"}
+                                    activeClassName={"paginationActive"}
+                                />
+                            
+                </div>
             </div> 
         </section>
-          <ReactPaginate
-            previousLabel={"Previous"}
-            nextLabel={"Next"}
-            pageCount={pageCount}
-            onPageChange={changePage}
-            containerClassName={"paginationBttns"}
-            previousLinkClassName={"previousBttn"}
-            nextLinkClassName={"nextBttn"}
-            disabledClassName={"paginationDisabled"}
-            activeClassName={"paginationActive"}
-          />
+          
         </>
       );
-    
-
-    // return (
-    //     <section className="shop_section layout_padding">
-    //         <div className="container">
-    //             <div className="heading_container heading_center">
-    //                 <h2>
-    //                     Latest Mobiles
-    //                 </h2>
-    //             </div>
-    //             <div className="row">
-                    
-    //             {mobiles.slice(pagination.start, pagination.end).map((Post) => (
-    //                 <div class="col-md-3 ">
-    //                     <div class="box">
-    //                         <a href={`/mobiles/${Post.id}`}>
-    //                         <div className="img-box">
-    //                             <img src={`mobile_image/${Post.photo}`} alt="" />
-    //                         </div>
-    //                         <div className="detail-box">
-    //                             <h6>
-    //                             {Post.company_name.split(" ")[0]}
-    //                             </h6>
-    //                             <h6>
-    //                                 Price:
-    //                                 <span>
-    //                                 {Post.price}.00
-    //                                 </span>
-    //                             </h6>
-                            
-    //                         </div>
-    //                         <h6>
-    //                             {Post.company_name}
-    //                         </h6>                            
-    //                     </a>
-    //                 </div>
-    //             </div>
-    //             ))}
-
-    //             </div>
-    //             <ReactPaginate
-    //                 previousLabel={"Previous"}
-    //                 nextLabel={"Next"}
-    //                 pageCount={pageCount}
-    //                 onPageChange={changePage}
-    //                 containerClassName={"paginationBttns"}
-    //                 previousLinkClassName={"previousBttn"}
-    //                 nextLinkClassName={"nextBttn"}
-    //                 disabledClassName={"paginationDisabled"}
-    //                 activeClassName={"paginationActive"}
-    //             />
-    //         </div>
-            
-    //     </section>
-    // );
 };
 
 export default Mobiles;
