@@ -7,11 +7,11 @@ body {
 }
 
 .layout_padding {
-  padding: 90px 0;
+  padding: 30px 0;
 }
 
 .layout_margin {
-  margin: 90px 0;
+  margin: 30px 0;
 }
 
 .layout_padding2 {
@@ -67,6 +67,7 @@ a,
 a:hover,
 a:focus {
   text-decoration: none;
+  padding: 20px;
 }
 
 a:hover,
@@ -574,6 +575,7 @@ a:focus {
 
 .feature_section .box .detail-box a {
   color: inherit;
+
 }
 
 .feature_section .box:hover {
@@ -912,5 +914,13 @@ a:focus {
 
 .footer_section .footer-info p a {
   color: inherit;
+}
+
+.paginationBttn {
+  width: 185px;
+  display: flex;
+  list-style: none;
+  border-radius: 0.25rem;
+  padding: 20px;
 }
 /*# sourceMappingURL=style.css.map */

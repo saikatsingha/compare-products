@@ -8,7 +8,7 @@ const navbar = () => (
   <nav className="navbar navbar-expand-lg custom_nav-container ">
     <a className="navbar-brand" href="/">
       <span>
-        Compare Products
+      Crawled Products
       </span>
     </a>
 

@@ -95,7 +95,7 @@ const Mobiles = () => {
                                     previousLabel={"Previous"} nextLabel={"Next"} 
                                     pageCount={pageCount}
                                     onPageChange={changePage}
-                                    containerClassName={"pagination"}
+                                    containerClassName={"paginationBttn"}
                                     previousLinkClassName={"previousBttn"}
                                     nextLinkClassName={"nextBttn"}
                                     disabledClassName={"paginationDisabled"}
