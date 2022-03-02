@@ -25,8 +25,8 @@ const MobileDetail = (props) => {
               <div class="container  ">
                 <div class="row">
                   <div class="col-md-6 col-lg-5 ">
-                    <div class="img-box">
-                      <img src={process.env.PUBLIC_URL + `/mobile_image/${mobile.photo}`} alt="" />
+                    <div class="img-box1">
+                      <img src={process.env.PUBLIC_URL + `/mobile_image/${mobile.photo}`} alt=""/>
                     </div>
                   </div>
                   <div class="col-md-6 col-lg-7">
@@ -51,7 +51,7 @@ const MobileDetail = (props) => {
                       <p>In the box you will find: <b>{mobile.in_the_box} </b></p>
                       <p>Warranty: <b>{mobile.warranty} </b>  </p>
                       
-                      <a href={mobile.link}> Buy </a>
+                      Flipkart link to <a href={mobile.link}> Buy </a>
                     </div>
                   </div>
                 </div>

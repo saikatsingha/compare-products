@@ -498,6 +498,12 @@ a:focus {
   max-width: 375px;
 }
 
+.about_section .img-box1 img {
+  max-width: 375px;
+  margin-left: 150px;
+  
+}
+
 .about_section .detail-box p {
   margin-top: 15px;
 }
